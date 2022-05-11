@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Visitante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <div [formGroup]="form">
+    <div class="grid p-fluid">
+      <div class="col-12 md:col-2">
+        <h5>Cadastrar</h5>
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control" formControlName="firstName" pInputText placeholder="Nome">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="lastName" pInputText placeholder="Sobrenome">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="email" pInputText placeholder="E-mail">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="phone" pInputText placeholder="Telefone">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="street" pInputText placeholder="Endereço">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="number" pInputText placeholder="Número">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="district" pInputText placeholder="Bairro">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="city" pInputText placeholder="Cidade">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="province" pInputText placeholder="Estado">
+      </div>
+      <div class="col-12 md:col-6">
+        <input type="text" class="form-control mt-1" formControlName="country" pInputText placeholder="País">
+      </div>
+      <div class="col-12 md:col-2">
+        <ion-button (click)="salvar()">Salvar</ion-button>
+        <ion-button fill="clear" color="dark" (click)="back()">Cancelar</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

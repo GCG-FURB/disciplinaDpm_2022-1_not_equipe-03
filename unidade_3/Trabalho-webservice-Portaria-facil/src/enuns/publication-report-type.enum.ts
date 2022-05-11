@@ -1,0 +1,4 @@
+export enum PublicationReportTypeEnum {
+  CONTAINS_OFFENSES = 'CONTAINS_OFFENSES',
+  RELATED_ANIME = 'RELATED_ANIME'
+}

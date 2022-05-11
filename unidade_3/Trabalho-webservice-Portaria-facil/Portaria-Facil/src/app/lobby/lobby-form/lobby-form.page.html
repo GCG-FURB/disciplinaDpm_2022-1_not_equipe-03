@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Portaria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <div [formGroup]="form" class="">
+    <div class="grid p-fluid">
+      <div class="col-12 md:col-2">
+        <h5>Cadastrar</h5>
+      </div>
+      <div class="col-6 md:col-4">
+        <input type="text" class="form-control" formControlName="name" pInputText placeholder="Nome">
+      </div>
+      <div class="col-6 md:col-4">
+        <input type="text" class="form-control mt-1" formControlName="physicalLocation" pInputText
+          placeholder="Local físico">
+      </div>
+      <br>
+      <div class="col-6 md:col-4">
+        <ion-checkbox style="border-radius:15px" formControlName="activeLobby"></ion-checkbox>
+        <ion-label> Portaria ativa </ion-label>
+      </div>
+      <br>
+      <div class="col-12 md:col-2">
+        <ion-button (click)="salvar()">Salvar</ion-button>
+        <ion-button fill="clear" color="dark" (click)="back()">Cancelar</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "portaria_user",
+    "password": "kA_xszvM24QFqbM#",
+    "database": "potaria_facil",
+    "host": "45.34.12.245",
+    "dialect": "postgres"
+  },
+  "jwtSecurity": "G&bH4pb2&lgsyMH5ggnDEcjs*V&G0J"
+}

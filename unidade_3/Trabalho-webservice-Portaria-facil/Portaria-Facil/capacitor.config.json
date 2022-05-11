@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Portaria-Facil",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

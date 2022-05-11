@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agendamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-button [routerLink]="['/', 'scheduling', 'scheduling-form', 'new']">Cadastrar</ion-button>
+  <br>
+  <br>
+  <p-table [value]="scheduling" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Motivo da visita</th>
+        <th>Tipo da visita</th>
+        <th>Data de chegada</th>
+        <th>Hora de chegada</th>
+        <th>Data de saída</th>
+        <th>Hora de saída</th>
+        <th>Portaria</th>
+        <th>Visitado</th>
+        <th>Visitante</th>
+        <th>Ações</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-scheduling>
+      <tr>
+        <td>{{scheduling.visitReason}}</td>
+        <td>{{scheduling.visitType}</td>
+        <td>{{scheduling.startDate}}</td>
+        <td>{{scheduling.startHour}}</td>
+        <td>{{scheduling.endDate}}</td>
+        <td>{{scheduling.endHour}}</td>
+        <td>{{scheduling.lobby}}</td>
+        <td>{{scheduling.visited}}</td>
+        <td>{{scheduling.visit}}</td>
+        <td>
+          <ion-button [routerLink]="['/', 'scheduling', 'scheduling-form', scheduling.id]" fill="clear">Editar</ion-button>
+          <ion-button  color="danger" fill="clear" (click)="remover(scheduling.id)">Remover</ion-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</ion-content>

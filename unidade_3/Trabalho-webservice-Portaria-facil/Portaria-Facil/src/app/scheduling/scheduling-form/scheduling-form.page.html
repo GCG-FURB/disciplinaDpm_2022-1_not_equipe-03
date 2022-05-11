@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agendamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <div [formGroup]="form" class="">
+    <div class="grid p-fluid">
+      <div class="col-12 md:col-2">
+        <h5>Cadastrar</h5>
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Motivo da visita</ion-label>
+        <input type="text" class="form-control" formControlName="visitReason" pInputText
+          placeholder="Digite o motivo da visita...">
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Tipo da visita</ion-label>
+        <input type="text" class="form-control mt-1" formControlName="visitType" pInputText
+          placeholder="Digite o tipo da visita...">
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Data de chegada</ion-label>
+        <p-calendar inputId="basic" appendTo="body" formControlName="startDate"></p-calendar>
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Hora de chegada</ion-label>
+        <p-calendar formControlName="startHour" appendTo="body" [timeOnly]="true" hourFormat="24" inputId="timeonly">
+        </p-calendar>
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Data de saída</ion-label>
+        <p-calendar inputId="basic" appendTo="body" formControlName="endDate"></p-calendar>
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Hora de saída</ion-label>
+        <p-calendar formControlName="endHour" appendTo="body" [timeOnly]="true" hourFormat="24" inputId="timeonly">
+        </p-calendar>
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Portaria</ion-label>
+        <input type="text" class="form-control mt-1" formControlName="lobby" pInputText
+          placeholder="Digite a portaria...">
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Visitado</ion-label>
+        <input type="text" class="form-control mt-1" formControlName="visited" pInputText
+          placeholder="Digite o nome do visitado...">
+      </div>
+      <div class="col-6 md:col-6">
+        <ion-label>Visitante</ion-label>
+        <input type="text" class="form-control mt-1" formControlName="visit" pInputText
+          placeholder="Digite o nome do visitante...">
+      </div>
+      <div class="col-12 md:col-2">
+        <ion-button (click)="salvar()">Salvar</ion-button>
+        <ion-button fill="clear" color="dark" (click)="back()">Cancelar</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
