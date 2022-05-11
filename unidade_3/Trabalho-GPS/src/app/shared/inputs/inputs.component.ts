@@ -23,9 +23,4 @@ export class InputsComponent implements OnInit {
       long: this.long
     });
   }
-
-
-  public resetSearch(){
-    
-  }
 }
