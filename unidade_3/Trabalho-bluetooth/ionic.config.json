@@ -1,0 +1,10 @@
+{
+  "name": "Trabalho-bluetooth",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}
