@@ -1,0 +1,10 @@
+{
+  "name": "BluethootSerial",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}
