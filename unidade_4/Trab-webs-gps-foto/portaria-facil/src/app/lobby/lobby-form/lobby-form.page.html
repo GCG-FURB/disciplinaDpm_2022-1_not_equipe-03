@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Portaria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-grid>
+    <ion-row [formGroup]="form">
+      <ion-col class="col-8 md:col-8">
+        <ion-col>
+          <ion-label>Nome</ion-label>
+          <ion-input type="text" class="form-control" formControlName="name" pInputText
+            placeholder="Digite o nome da portaria...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Local físico</ion-label>
+          <ion-input type="text" class="form-control mt-1" formControlName="physicalLocation" pInputText
+            placeholder="Digite o local físico...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Pesquise se quiser</ion-card-subtitle>
+            <ion-card-title>Pesquisar</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-col>
+              <ion-label>Latitude</ion-label>
+              <ion-input type="text" class="form-control" formControlName="latitude" pInputText
+                placeholder="Digite a latitude...">
+              </ion-input>
+            </ion-col>
+            <br>
+            <ion-col>
+              <ion-label>Longetude</ion-label>
+              <ion-input type="text" class="form-control mt-1" formControlName="longitude" pInputText
+                placeholder="Digite a longetude...">
+              </ion-input>
+            </ion-col>
+            <ion-col style="margin-top: 10px;">
+              <ion-fab-button color="primary" (click)="showInputs()">OK</ion-fab-button>
+            </ion-col>
+          </ion-card-content>
+        </ion-card>
+        <br>
+        <div class="col-6 md:col-4">
+          <ion-checkbox style="border-radius:15px" formControlName="activeLobby"></ion-checkbox>
+          <ion-label> Portaria ativa</ion-label>
+        </div>
+        <br>
+        <ion-col>
+          <ion-button (click)="salvar()">Salvar</ion-button>
+          <ion-button fill="clear" color="dark" (click)="back()">Cancelar</ion-button>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Portarias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-button [routerLink]="['/', 'lobby', 'lobby-form', 'new']">Cadastrar</ion-button>
+  <br>
+  <br>
+  <p-table [value]="lobby" responsiveLayout="scroll" class="text-center">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Nome</th>
+        <th>Portaria ativa</th>
+        <th>Local físico</th>
+        <th class="text-center">Ações</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-lobby of lobby>
+      <tr>
+        <td>{{lobby.name}}</td>
+        <td *ngIf="lobby.activeLobby">Sim</td>
+        <td *ngIf="!lobby.activeLobby">Não</td>
+        <td>{{lobby.physicalLocation}}</td>
+        <td class="text-center">
+          <ion-button [routerLink]="['/', 'lobby', 'lobby-form', lobby.id]" fill="clear"><ion-icon slot="icon-only" name="open-outline"></ion-icon></ion-button>
+          <ion-button color="danger" fill="clear" (click)="remover(lobby.id)"><ion-icon slot="icon-only" name="trash-outline"></ion-icon></ion-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</ion-content>

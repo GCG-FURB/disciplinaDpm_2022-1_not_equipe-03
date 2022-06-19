@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pessoa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-grid>
+    <ion-row [formGroup]="form">
+      <ion-col class="col-8 md:col-8">
+        <ion-col>
+          <div class="col-12 md:col-2">
+            <app-photo (photoId)="photo($event)"></app-photo>
+          </div>
+        </ion-col>
+        <ion-col>
+          <ion-label>Nome</ion-label>
+          <ion-input type="text" class="form-control" formControlName="firstName" pInputText
+            placeholder="Digite o primeiro nome...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Sobrenome</ion-label>
+          <ion-input type="text" class="form-control" formControlName="lastName" pInputText
+            placeholder="Digite o sobrenome...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>E-mail</ion-label>
+          <ion-input type="text" class="form-control" formControlName="email" pInputText
+            placeholder="Digite o e-mail...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Telefone</ion-label>
+          <ion-input type="text" class="form-control" formControlName="phone" pInputText
+            placeholder="Digite o telefone...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Endereço</ion-label>
+          <ion-input type="text" class="form-control" formControlName="street" pInputText
+            placeholder="Digite o endereço...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Número</ion-label>
+          <ion-input type="text" class="form-control" maxlength="11" formControlName="number" pInputText
+            placeholder="Digite o número...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Bairro</ion-label>
+          <ion-input type="text" class="form-control" formControlName="district" pInputText
+            placeholder="Digite o bairro...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Cidade</ion-label>
+          <ion-input type="text" class="form-control" formControlName="city" pInputText
+            placeholder="Digite o cidade...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Estado</ion-label>
+          <ion-input type="text" class="form-control" formControlName="province" pInputText
+            placeholder="Digite o estado...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>País</ion-label>
+          <ion-input type="text" class="form-control" formControlName="country" pInputText
+            placeholder="Digite o país...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-button (click)="salvar()">Salvar</ion-button>
+          <ion-button fill="clear" color="dark" (click)="back()">Cancelar</ion-button>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

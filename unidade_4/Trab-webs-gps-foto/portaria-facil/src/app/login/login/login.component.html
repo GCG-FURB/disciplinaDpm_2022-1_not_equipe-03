@@ -1,0 +1,48 @@
+<div class="row">
+  <!-- <div class="col-md-7 col-lg-8">
+    <div class="box">
+      <img [src]="image">
+    </div>
+  </div> -->
+  <div class="col-md-6 col-lg-5">
+    <section class="middle text-center">
+      <div class="login">
+        <img class="logo" src="assets/image/portaria-facil.PNG">
+        <form [formGroup]="form">
+          <div class="label line">
+            <span class="title">Seja bem vindo</span>
+          </div>
+          <div class="form-group">
+            <div class="input-group required">
+              <span class="input-group-addon">
+                <em class="fa fa-user"></em>
+              </span>
+              <input type="email" class="form-control placeholder-no-fix" name="user"
+                formControlName="email" placeholder="Usuário">
+            </div>
+            <br>
+            <div id="password-input-group" class="input-group required">
+              <span class="input-group-addon">
+                <em class="fa fa-lock"></em>
+              </span>
+              <input [type]="showPerson ? 'text' : 'password'" autocomplete="off"
+                class="form-control" name="password" formControlName="password" placeholder="Senha">
+              <span (click)="onClickEye()" *ngIf="!showPerson" class="input-group-addon cursor-pointer">
+                <em class="far fa-eye"></em>
+              </span>
+              <span (click)="onClickEye()" *ngIf="showPerson" class="input-group-addon cursor-pointer">
+                <em class="far fa-eye-slash"></em>
+              </span>
+            </div>
+            <br>
+            <ion-button style="width: 100%;" [disabled]="loading" (click)="login()">{{loading ? 'Aguarde...' : 'Entrar'}}</ion-button>
+            <br>
+            <div>
+              <a href="www.google.com.br" class="title">Não sou cadastrado</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>
