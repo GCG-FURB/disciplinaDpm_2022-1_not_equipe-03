@@ -1,0 +1,10 @@
+{
+  "name": "Portaria-Facil",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}

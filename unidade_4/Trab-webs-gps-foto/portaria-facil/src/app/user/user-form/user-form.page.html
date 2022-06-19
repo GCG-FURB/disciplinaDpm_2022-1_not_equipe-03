@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-grid>
+    <ion-row [formGroup]="form">
+      <ion-col class="col-8 md:col-8">
+        <ion-col>
+          <ion-label>Nome</ion-label>
+          <ion-input type="text" class="form-control" formControlName="name" pInputText
+            placeholder="Digite o motivo da visita...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Senha</ion-label>
+          <ion-input type="password" class="form-control" formControlName="password" pInputText
+            placeholder="Digite o motivo da visita...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>E-mail</ion-label>
+          <ion-input type="text" class="form-control" formControlName="email" pInputText
+            placeholder="Digite o motivo da visita...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-button (click)="salvar()">Salvar</ion-button>
+          <ion-button fill="clear" color="dark" (click)="back()">Cancelar</ion-button>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agendamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-grid>
+    <ion-row [formGroup]="form">
+      <ion-col class="col-8 md:col-8">
+        <ion-col>
+          <ion-label>Motivo da visita</ion-label>
+          <ion-input type="text" class="form-control" formControlName="visitReason" pInputText
+            placeholder="Digite o motivo da visita...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Tipo da visita</ion-label>
+          <br>
+          <p-autoComplete class="mt-1" [required]="true" [style]="{width: '100%'}" formControlName="visitType"
+            [suggestions]="visityType" (completeMethod)="onSearchVisitType($event)"
+            placeholder="Pesquise o tipo da visita..." [dropdown]="true" field="name"></p-autoComplete>
+        </ion-col>
+        <br><br>
+        <ion-col>
+          <ion-label>Portaria</ion-label>
+          <br>
+          <p-autoComplete class="mt-1" [style]="{width: '100%'}" formControlName="lobby" [suggestions]="lobby"
+            (completeMethod)="onSearchLobby($event)" placeholder="Pesquise a portaria..." [dropdown]="true"
+            field="name">
+          </p-autoComplete>
+        </ion-col>
+        <br><br>
+        <ion-col>
+          <ion-label>Visitado</ion-label>
+          <br>
+          <p-autoComplete class="mt-1" [style]="{width: '100%'}" formControlName="visited" [suggestions]="visited"
+            (completeMethod)="onSearchVisited($event)" placeholder="Pesquise uma pessoa para ser o visitado..."
+            [dropdown]="true" field="firstName"></p-autoComplete>
+        </ion-col>
+        <br><br>
+        <ion-col>
+          <ion-label>Visitante</ion-label>
+          <br>
+          <p-autoComplete class="mt-1" [style]="{width: '100%'}" formControlName="visit" [suggestions]="visit"
+            (completeMethod)="onSearchVisit($event)" placeholder="Pesquise uma pessoa para ser o visitante..."
+            [dropdown]="true" field="firstName"></p-autoComplete>
+        </ion-col>
+        <br><br>
+        <div style="margin-left: 0;" class="row">
+          <ion-col>
+            <ion-label>Data de chegada</ion-label>
+            <br>
+            <div class="p-inputgroup">
+              <p-calendar [style]="{width: '100%'}" dateFormat="dd/mm/yy" [showIcon]="true" inputId="icon" appendTo="body"
+                formControlName="startDate"></p-calendar>
+            </div>
+          </ion-col>
+          <ion-col>
+            <ion-label>Hora de chegada</ion-label>
+            <br>
+            <div class="p-inputgroup">
+              <p-calendar [style]="{width: '100%'}" [showIcon]="true" formControlName="startHour" appendTo="body"
+                [timeOnly]="true" hourFormat="24" inputId="timeonly"></p-calendar>
+            </div>
+          </ion-col>
+        </div>
+        <br>
+        <div style="margin-left: 0;" class="row">
+          <ion-col>
+            <ion-label>Data de saída</ion-label>
+            <br>
+            <div class="p-inputgroup">
+              <p-calendar [style]="{width: '100%'}" dateFormat="dd/mm/yy" [showIcon]="true" inputId="icon" appendTo="body"
+                formControlName="endDate">
+              </p-calendar>
+            </div>
+          </ion-col>
+          <ion-col>
+            <ion-label>Hora de saída</ion-label>
+            <br>
+            <div class="p-inputgroup">
+              <p-calendar [style]="{width: '100%'}" [showIcon]="true" formControlName="endHour" appendTo="body"
+                [timeOnly]="true" hourFormat="24" inputId="timeonly">
+              </p-calendar>
+            </div>
+          </ion-col>
+        </div>
+        <br>
+        <ion-col>
+          <ion-button (click)="salvar()">Salvar</ion-button>
+          <ion-button fill="clear" color="dark" (click)="back()">Cancelar</ion-button>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,9 @@
+<input class="photo" type="file" (change)="onChangePhoto($event)" #file>
+<ion-avatar (click)="addPhotoToGallery()">
+  <img [src]="image">
+</ion-avatar>
+<br>
+<ion-button class="button-photo" (click)="addPhotoToGallery()" fill="clear" color="dark">
+  <ion-icon name="camera"></ion-icon>
+</ion-button>
+<br>

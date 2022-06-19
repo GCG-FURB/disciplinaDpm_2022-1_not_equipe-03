@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tipo de visita</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-grid>
+    <ion-row [formGroup]="form">
+      <ion-col class="col-8 md:col-8">
+        <ion-col>
+          <ion-label>Nome</ion-label>
+          <ion-input type="text" class="form-control" formControlName="name" pInputText placeholder="Digite o nome...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-label>Descrição</ion-label>
+          <ion-input type="text" class="form-control mt-1" formControlName="description" pInputText
+            placeholder="Digite a descrição...">
+          </ion-input>
+        </ion-col>
+        <br>
+        <ion-col>
+          <ion-button (click)="salvar()">Salvar</ion-button>
+          <ion-button fill="clear" color="dark" (click)="back()">Cancelar</ion-button>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
